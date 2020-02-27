@@ -1,0 +1,186 @@
+*{
+    /* outline: 2px dashed green; */
+    margin: 0;
+    padding:0;
+}
+/* @media screen and (max-width: 600px) {
+.container {
+    height: 100%;
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "q"
+        "h"
+        "e"
+        "b"
+        "f";
+}
+ */
+/* step one - build your grid */
+.container {
+    padding:10%;
+    /* height: 100%; */
+    display: grid;
+    grid-gap: 25px;
+    /* this will be  the same for everyone */
+    grid-template-columns: repeat(12, 1fr);
+    /* this will be customized, based on your grid, use pixels or % */
+    grid-template-rows: auto;
+    /* use letters from step 2 to build the grid */
+    grid-template-areas: 
+        "h h h h h h e e e e e e"
+        "b b b b b b c c c c c c"
+        "a a a a a a d d d d d d"
+        "a a a a a a g g g g g g"
+        "f f f f f f f f f f f f";
+       
+
+}
+li{
+    font-weight: 500;
+    padding:10px;
+}
+
+.date{
+    font-weight: 300;
+}
+body{
+    font-size: 4em;
+    font-family: 'Lato', sans-serif;
+    font-size: 1em;
+  
+}
+
+
+ul{
+    list-style: none;
+}
+
+
+h1{
+    font-size: 3em;
+    padding-bottom: 10px;
+}
+
+h2{
+    padding-top:25px;
+    padding-bottom: 15px;
+}
+
+h3{
+    padding-top:45px;
+}
+
+
+
+
+/* step three - build a grid that becomes active when the pixels are 800px or less */
+@media screen and (max-width: 800px) {
+
+    .container{
+        display: grid;
+        grid-gap: 15px;
+        /* grid is only one column, keep this way */
+        grid-template-columns: 1fr;
+        /* you can enter values, or auto will adjust the box sizes based on content */
+        grid-template-rows: auto;
+        grid-template-areas:
+        "h"
+        "b"
+        "a"
+        "e"
+        "c"
+        "d"
+        "g"
+        "f"
+        ;
+    }
+}
+
+/* step 1 - assign each of your sections a letter */
+
+
+header {
+    grid-area:h;
+    padding-top: 50px;
+    padding-left: 50px;
+    font-family: playfair display;;
+   background-color: lightpink;
+   
+    
+}
+
+.professionalprofile {
+    grid-area:b;
+    padding-top: 350px;
+    padding-right: 200px;
+    
+}
+
+.education {
+    grid-area:e;
+    border-bottom: 5px solid  lightpink;
+}
+
+.skills {
+    grid-area:a;
+    padding-top: 25px;
+}
+
+.workexperience{
+    grid-area:c;
+    border-bottom: 5px solid lightpink;
+    padding-bottom: 0px;
+}
+
+.relevantproject1{
+    grid-area:d;
+    
+}
+
+.relevantproject2{
+    grid-area:g;
+    padding-bottom: 500px;
+}
+
+.wit{
+    font-style: italic;
+    font-weight: lighter;
+}
+
+.degree{
+    font-weight: bold;
+}
+
+.rickys{
+    
+}
+
+.title{
+   
+}
+
+.profprof{
+    font-family:playfair display;
+}
+
+.skilltitle{
+    font-family:playfair display;
+}
+
+.worktitle{
+    font-family:playfair display;
+}
+
+.edutitle{
+    font-family:playfair display;
+}
+
+.reltitle{
+    font-family:playfair display;
+}
+footer{
+    grid-area:f;
+}
