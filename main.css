@@ -31,10 +31,14 @@
     /* use letters from step 2 to build the grid */
     grid-template-areas: 
         "h h h h h h e e e e e e"
+        "p p p p p p e e e e e e"
         "b b b b b b c c c c c c"
         "a a a a a a d d d d d d"
         "a a a a a a g g g g g g"
-        "f f f f f f f f f f f f";
+        "f f f f f f f f f f f f"
+        "f f f f f f f f f f f f"
+        ;
+    background-color: rgb(252, 231, 234);
        
 
 }
@@ -50,6 +54,8 @@ body{
     font-size: 4em;
     font-family: 'Lato', sans-serif;
     font-size: 1em;
+    background-image: url("assets/resume.svg");
+    
   
 }
 
@@ -95,6 +101,7 @@ h3{
         "d"
         "g"
         "f"
+        "p"
         ;
     }
 }
@@ -106,27 +113,34 @@ header {
     grid-area:h;
     padding-top: 50px;
     padding-left: 50px;
-    font-family: playfair display;;
+    font-family: playfair display;
    background-color: lightpink;
+   border-right: 4px solid lightseagreen;
+
    
     
 }
 
 .professionalprofile {
     grid-area:b;
-    padding-top: 350px;
     padding-right: 200px;
+    padding-left: 50px;
+    border-right: 4px solid lightseagreen;
     
 }
 
 .education {
     grid-area:e;
     border-bottom: 5px solid  lightpink;
+    padding-top: 150px;
+    border-right: 4px solid lightseagreen;
 }
 
 .skills {
     grid-area:a;
     padding-top: 25px;
+    padding-left: 50px;
+    border-right: px solid lightseagreen;
 }
 
 .workexperience{
@@ -142,12 +156,12 @@ header {
 
 .relevantproject2{
     grid-area:g;
-    padding-bottom: 500px;
 }
 
 .wit{
     font-style: italic;
     font-weight: lighter;
+    font-size: 15px;
 }
 
 .degree{
@@ -181,6 +195,25 @@ header {
 .reltitle{
     font-family:playfair display;
 }
+
+.photo{
+    grid-area:p;
+}
+
+.graphicdesigner{
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    grid-area: g;
+
 footer{
     grid-area:f;
+.background-color {
+  height: 50px;
+  width: 100px;
+  background-color: white;
+}
+
+    
 }
