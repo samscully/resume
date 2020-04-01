@@ -19,30 +19,95 @@
 }
  */
 /* step one - build your grid */
-.container {
+.wrapper {
+    display: grid;
+    /* what makes it so we can acess css grid function */
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: 100px;
+    border: 2px solid #f76707;
+    border-radius: 5px;
+    background-image: url("assets/graphicdesigner.svg");
+    /* ahhhh idk how to make the svg a background ! */
+  }
+.designbackground{ background-image: url("assets/graphicdesigner.svg");
+    grid-column-start: 1;
+    grid-column-end: 12;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    z-index: 1; 
+} 
+
+/* .box1 {
+background-color: #51ecf1c7;  
+grid-column-start: 8;
+grid-column-end: 4;
+grid-row-start: 1;
+grid-row-end: 3;
+z-index: 2;
+} */
+
+.box2 {
+background-color: #25c2c7b6;  
+grid-column-start: 1;
+grid-row-start: 2;
+grid-row-end: 4;
+z-index: 1;
+}
+.box5{
+background-color: chartreuse;
+grid-column-start: 6;
+grid-row-start: 1;
+grid-row-end:  30;
+
+}
+
+.box {
+/* styling that decides everything */
+border: 2px solid #ffa94d;
+border-radius: 5px;
+padding: 2em;
+color: #67d626;
+padding-top: 0mm;
+}
+  
+.wrapper {
     padding:10%;
     /* height: 100%; */
     display: grid;
     grid-gap: 25px;
     /* this will be  the same for everyone */
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: (1fr);
     /* this will be customized, based on your grid, use pixels or % */
     grid-template-rows: auto;
     /* use letters from step 2 to build the grid */
-    grid-template-areas: 
-        "h h h h h h e e e e e e"
-        "p p p p p p e e e e e e"
-        "b b b b b b c c c c c c"
-        "a a a a a a d d d d d d"
-        "a a a a a a g g g g g g"
-        "f f f f f f f f f f f f"
-        "f f f f f f f f f f f f"
-        ;
-    background-color: rgb(252, 231, 234);
-       
-
+    
+    background-color: rgb(239, 171, 174);
 }
-li{
+
+
+
+/* .graphicdesignersvg{
+    grid-column-start: 1;
+    grid-column-end: 12;
+    grid-row-start: 1;
+    grid-row-end: auto;
+    z-index: 1; */
+
+    .box1 {
+    display: grid;
+    /* background-color: #51ecf1c7;   */
+    grid-column-start: 8;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    z-index: 2;
+  }
+  
+ 
+      
+
+
+.li{
     font-weight: 500;
     padding:10px;
 }
@@ -54,8 +119,7 @@ body{
     font-size: 4em;
     font-family: 'Lato', sans-serif;
     font-size: 1em;
-    background-image: url("assets/resume.svg");
-    
+   
   
 }
 
@@ -85,96 +149,119 @@ h3{
 /* step three - build a grid that becomes active when the pixels are 800px or less */
 @media screen and (max-width: 800px) {
 
-    .container{
+    .wrapper {
         display: grid;
-        grid-gap: 15px;
-        /* grid is only one column, keep this way */
-        grid-template-columns: 1fr;
-        /* you can enter values, or auto will adjust the box sizes based on content */
-        grid-template-rows: auto;
-        grid-template-areas:
-        "h"
-        "b"
-        "a"
-        "e"
-        "c"
-        "d"
-        "g"
-        "f"
-        "p"
-        ;
+        /* what makes it so we can acess css grid function */
+        grid-template-columns: repeat 1fr;
+        grid-auto-rows: 100px;
+        border: 2px solid #f76707;
+        border-radius: 5px;
+        background-image: url("assets/graphicdesigner.svg");
+        /* ahhhh idk how to make the svg a background ! */
+      }
     }
-}
 
 /* step 1 - assign each of your sections a letter */
 
 
-header {
-    grid-area:h;
+.header {
+    grid-column-start: 1;
+    grid-column-end: 12;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    z-index: 1;
     padding-top: 50px;
-    padding-left: 50px;
     font-family: playfair display;
-   background-color: lightpink;
-   border-right: 4px solid lightseagreen;
-
-   
-    
+   background-color: rgb(185, 67, 85);
 }
 
 .professionalprofile {
-    grid-area:b;
-    padding-right: 200px;
-    padding-left: 50px;
-    border-right: 4px solid lightseagreen;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 4;
+    grid-row-end: 6;
+    z-index: 1;
+    /* padding-right: 100px; */
+    /* padding-left: 30px; */
+    /* border-bottom: 4px solid lightseagreen; */
     
 }
 
 .education {
-    grid-area:e;
-    border-bottom: 5px solid  lightpink;
+    grid-column-start: 8;
+    grid-column-end: 12;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    z-index: 1;
+    /* border-bottom: 5px solid  lightpink; */
     padding-top: 150px;
-    border-right: 4px solid lightseagreen;
+    /* border-right: 4px solid white; */
+    padding-right: 20px;
 }
 
 .skills {
-    grid-area:a;
-    padding-top: 25px;
-    padding-left: 50px;
-    border-right: px solid lightseagreen;
-}
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 6;
+    z-index: 1;
+    /* padding-top: 25px; */
+    /* padding-left: 50px; */
+    font-family: 'Lato', sans-serif;
+    list-style-type: square;
+    }
 
 .workexperience{
-    grid-area:c;
-    border-bottom: 5px solid lightpink;
-    padding-bottom: 0px;
+    grid-column-start: 8;
+    grid-column-end: 12;
+    grid-row-start: 6;
+    grid-row-end: 4;
+    z-index: 1;
+    /* border-bottom: 5px solid lightseagreen; */
+   
 }
 
 .relevantproject1{
-    grid-area:d;
+    padding-top: 25px ;
+    grid-column-start: 8;
+    grid-column-end: 12;
+    grid-row-start: 6;
+    grid-row-end: 8;
+    z-index: 1;
     
 }
 
+.netdate{
+    font-weight: 100;
+}
+
+.marketdate{
+    font-weight: 100;
+}
 .relevantproject2{
-    grid-area:g;
+    grid-column-start: 8;
+    grid-column-end: 12;
+    grid-row-start: 10;
+    grid-row-end: auto;
+    z-index: 1;
 }
 
 .wit{
     font-style: italic;
     font-weight: lighter;
-    font-size: 15px;
+    font-size: 20px;
+    font-family:playfair display;
+    grid-column-start: 7;
+    grid-column-end: 14;
+    grid-row-start: 4;
+    grid-row-end: auto;
+    z-index: 1;
+}
 }
 
 .degree{
-    font-weight: bold;
+    font-weight: regular;
 }
 
-.rickys{
-    
-}
-
-.title{
-   
-}
 
 .profprof{
     font-family:playfair display;
@@ -197,23 +284,34 @@ header {
 }
 
 .photo{
-    grid-area:p;
-}
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    z-index: 1;
 
-.graphicdesigner{
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-    writing-mode: vertical-rl;
-    text-orientation: upright;
-    grid-area: g;
-
-footer{
-    grid-area:f;
-.background-color {
-  height: 50px;
-  width: 100px;
-  background-color: white;
 }
+.contact{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 12;
+    grid-row-end: 12;
+    z-index: 1;
+}
+.icon-container{
+    width: 80%;
+    /* height: 100px; */
+    display:grid;
+    grid-column-start: 4;
+    grid-column-end: 4;
+    grid-row-start: 12;
+    grid-row-end: 12;
+    z-index: 1;
+}
+   
+
+
+
+
 
     
-}

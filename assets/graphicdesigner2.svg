@@ -8,9 +8,8 @@
 	.st2{font-family:'MyanmarMN-Bold';}
 	.st3{font-size:13px;}
 	.st4{fill:#EFABAE;}
-	.st5{fill:#F4D3D5;}
-	.st6{font-family:'LaoMN-Bold';}
-	.st7{font-size:16.5672px;}
+	.st5{font-family:'LaoMN-Bold';}
+	.st6{font-size:24.1395px;}
 </style>
 <rect x="-3.8" class="st0" width="618" height="91.8"/>
 <g>
@@ -105,6 +104,5 @@
 <path class="st1" d="M306.8,77.7v2.5h5.6v-3V39.1c-1.9,0-3.8,0.1-5.6,0.1c0,0.7,0,1.4,0,2.1C306.8,53.5,306.8,65.6,306.8,77.7z"/>
 <rect x="294.6" y="80.3" class="st0" width="5.6" height="716.7"/>
 <rect x="306.8" y="80.3" class="st0" width="5.6" height="716.7"/>
-<text transform="matrix(1 0 0 1 316.4702 102.1006)" class="st5 st6 st7">Graphic Designer</text>
-<rect x="-2.2" y="692.3" class="st0" width="618" height="128.5"/>
+<text transform="matrix(-1.836970e-16 1 -1 -1.836970e-16 268.29 88.1055)" class="st1 st5 st6">Graphic Designer</text>
 </svg>
